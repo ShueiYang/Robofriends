@@ -1,5 +1,4 @@
-
- @font-face {
+@font-face {
     font-family: 'SEGA LOGO FONT';
     font-style: normal;
     font-weight: normal;
@@ -12,4 +11,9 @@ h1 {
     color: #0ccac4;
 }  
 
-
+.container {
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

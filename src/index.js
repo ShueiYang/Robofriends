@@ -6,16 +6,11 @@ import 'tachyons';
 import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux';
-import { legacy_createStore, applyMiddleware, combineReducers } from 'redux';
-import { searchRobots, requestRobots } from './reducers';
-import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
+import store from './app/store';
 
-const logger = createLogger()
-const rootReducer = combineReducers({searchRobots, requestRobots})
-const store = legacy_createStore(rootReducer, applyMiddleware(thunk, logger))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render (
   <React.StrictMode>
     <Provider store= {store}>
